@@ -44,7 +44,7 @@ opts = OptionParser.new do |opts|
     exit!
   end
 
-  opts.on_tail "Examples: "
+  opts.on_tail "\nExamples: "
   opts.on_tail "\t#{__FILE__} -b 00:11:22:33:44:55 -c 0 -t 55:44:33:22:11:00 -i wlan0mon"
 end
 
@@ -63,7 +63,10 @@ missing("COUNT") if options[:count].nil?
 missing("TARGET") if options[:target].nil?
 missing("INTERFACE") if options[:iface].nil?
 
-exit! if $err
+if $err
+  puts "[*] Use -h/--help for the help menu".colorize(:green)
+  exit!
+end
 
 begin
   pkt = PacketGen.gen('RadioTap').
