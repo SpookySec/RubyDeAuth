@@ -88,4 +88,7 @@ begin
 rescue PCAPRUB::PCAPRUBError
   puts "[-] Please make sure '#{options[:iface]}' is valid.".colorize(:red)
   exit!
+rescue Interrupt
+  puts "[!] Shutting down gracefully".colorize(:yellow)
+  exit
 end
