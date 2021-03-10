@@ -6,8 +6,8 @@ A small script that injects Deauth Packets using the library "PacketGen"
 # Installation
 ```
 $ git clone https://github.com/SpookySec/RubyDeAuth.git
-# gem install colorize packetgen
 # apt install libpcap-dev
+# gem install colorize packetgen
 ```
 
 # Usage
