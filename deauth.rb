@@ -4,10 +4,6 @@ require "colorize"
 
 puts "[~] Made by: @spooky_sec".colorize(:blue)
 
-#clientaddr = "30:45:96:E8:3F:B3"
-#bssid = "F4:4C:7F:9A:1E:44"
-#iface = "wlan0mon"
-
 if Process.euid != 0
   puts "[!] Please run this as root".colorize(:yellow)
   exit!
